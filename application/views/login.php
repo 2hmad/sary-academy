@@ -15,7 +15,16 @@
     <link href="<?php echo base_url(); ?>assets/backend/css/app.min.css" rel="stylesheet" type="text/css" />
     <!--Notify for ajax-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-
+<style>
+button[type="submit"] {
+    background-color:  #ff9700 !important;
+    border-color: #ff9700 !important;
+}
+button[type="submit"]:hover {
+    background-color:  #ffaa2f;
+    border-color: #ffaa2f;
+}
+</style>
 </head>
 
 <body class="auth-fluid-pages pb-0">
