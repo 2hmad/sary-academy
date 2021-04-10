@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2021 at 09:53 PM
+-- Generation Time: Apr 11, 2021 at 01:44 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -242,7 +242,11 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('b428kdjmn8ecfi5aqed1ee2iq1eafdvj', '::1', 1617992893, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631373939323839333b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2235223b7363686f6f6c5f69647c733a313a2232223b757365725f6e616d657c733a353a2241686d6564223b757365725f747970657c733a31303a22737570657261646d696e223b),
 ('1jvijan4hepia7kik0dj9ots8lm821s9', '::1', 1617994248, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631373939343234383b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2235223b7363686f6f6c5f69647c733a313a2232223b757365725f6e616d657c733a353a2241686d6564223b757365725f747970657c733a31303a22737570657261646d696e223b),
 ('4qf4v37vgrg7ibts5l6vis1afmj0frvp', '::1', 1617997968, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631373939373936383b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2235223b7363686f6f6c5f69647c733a313a2232223b757365725f6e616d657c733a353a2241686d6564223b757365725f747970657c733a31303a22737570657261646d696e223b),
-('v3q42e2phfsodaedo4afk95kvgkf4i7n', '::1', 1617997975, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631373939373936383b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2235223b7363686f6f6c5f69647c733a313a2232223b757365725f6e616d657c733a353a2241686d6564223b757365725f747970657c733a31303a22737570657261646d696e223b);
+('v3q42e2phfsodaedo4afk95kvgkf4i7n', '::1', 1617998320, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631373939383332303b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2235223b7363686f6f6c5f69647c733a313a2232223b757365725f6e616d657c733a353a2241686d6564223b757365725f747970657c733a31303a22737570657261646d696e223b),
+('kjc7ha3o5altaq6noi99uhq1u7odlig9', '::1', 1617999222, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631373939393232323b),
+('offv4pgck8v4c6vcg5h75geapb90u0b1', '::1', 1617999536, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631373939393533363b),
+('2ivu280bcdlhv0ijvittd1noemj1h3nk', '::1', 1617999569, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631373939393533363b),
+('nosip4t7j6leiujo70mbmanousf9ueiu', '::1', 1618097813, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631383039373736383b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2235223b7363686f6f6c5f69647c733a313a2232223b757365725f6e616d657c733a353a2241686d6564223b757365725f747970657c733a31303a22737570657261646d696e223b);
 
 -- --------------------------------------------------------
 
@@ -256,14 +260,6 @@ CREATE TABLE `classes` (
   `school_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `classes`
---
-
-INSERT INTO `classes` (`id`, `name`, `school_id`) VALUES
-(1, 'test', 1),
-(2, 'demo', 2);
-
 -- --------------------------------------------------------
 
 --
@@ -275,13 +271,6 @@ CREATE TABLE `class_rooms` (
   `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `class_rooms`
---
-
-INSERT INTO `class_rooms` (`id`, `name`, `school_id`) VALUES
-(1, 'test', 2);
 
 -- --------------------------------------------------------
 
@@ -456,13 +445,6 @@ CREATE TABLE `daily_attendances` (
   `school_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `daily_attendances`
---
-
-INSERT INTO `daily_attendances` (`id`, `timestamp`, `class_id`, `section_id`, `student_id`, `status`, `session_id`, `school_id`) VALUES
-(1, '1617400800', 1, 1, 1, 0, '1', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -474,13 +456,6 @@ CREATE TABLE `departments` (
   `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `departments`
---
-
-INSERT INTO `departments` (`id`, `name`, `school_id`) VALUES
-(1, 'Ahmed', 2);
 
 -- --------------------------------------------------------
 
@@ -496,44 +471,6 @@ CREATE TABLE `enrols` (
   `school_id` int(11) DEFAULT NULL,
   `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
-
---
--- Dumping data for table `enrols`
---
-
-INSERT INTO `enrols` (`id`, `student_id`, `class_id`, `section_id`, `school_id`, `session`) VALUES
-(1, 1, 1, 1, 1, '1'),
-(2, 2, 2, 2, 2, '1'),
-(3, 3, 2, 2, 2, '1'),
-(4, 4, 2, 2, 2, '1'),
-(5, 5, 2, 2, 2, '1'),
-(6, 6, 2, 2, 2, '1'),
-(7, 7, 2, 2, 2, '1'),
-(8, 8, 2, 2, 2, '1'),
-(9, 9, 2, 2, 2, '1'),
-(10, 10, 2, 2, 2, '1'),
-(11, 11, 2, 2, 2, '1'),
-(12, 12, 2, 2, 2, '1'),
-(13, 13, 2, 2, 2, '1'),
-(14, 14, 2, 2, 2, '1'),
-(15, 15, 2, 2, 2, '1'),
-(16, 16, 2, 2, 2, '1'),
-(17, 17, 2, 2, 2, '1'),
-(18, 18, 2, 2, 2, '1'),
-(19, 19, 2, 2, 2, '1'),
-(20, 20, 2, 2, 2, '1'),
-(21, 21, 2, 2, 2, '1'),
-(22, 22, 2, 2, 2, '1'),
-(23, 23, 2, 2, 2, '1'),
-(24, 24, 2, 2, 2, '1'),
-(25, 25, 2, 2, 2, '1'),
-(26, 26, 2, 2, 2, '1'),
-(27, 27, 2, 2, 2, '1'),
-(28, 28, 2, 2, 2, '1'),
-(29, 29, 2, 2, 2, '1'),
-(30, 30, 2, 2, 2, '1'),
-(31, 31, 2, 2, 2, '1'),
-(32, 32, 2, 2, 2, '1');
 
 -- --------------------------------------------------------
 
@@ -565,14 +502,6 @@ CREATE TABLE `exams` (
   `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `exams`
---
-
-INSERT INTO `exams` (`id`, `name`, `starting_date`, `ending_date`, `school_id`, `session`) VALUES
-(1, 'test', '1617400800', '1617400800', 2, '1'),
-(2, 'test', '1617487200', '1617487200', 2, '1');
-
 -- --------------------------------------------------------
 
 --
@@ -590,13 +519,6 @@ CREATE TABLE `expenses` (
   `updated_at` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `expenses`
---
-
-INSERT INTO `expenses` (`id`, `expense_category_id`, `date`, `amount`, `school_id`, `session`, `created_at`, `updated_at`) VALUES
-(1, 2, 1617660000, '50', 2, '1', 1617660000, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -609,14 +531,6 @@ CREATE TABLE `expense_categories` (
   `school_id` int(11) DEFAULT NULL,
   `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `expense_categories`
---
-
-INSERT INTO `expense_categories` (`id`, `name`, `school_id`, `session`) VALUES
-(1, 'test', 1, '1'),
-(2, 'الكهرباء', 2, '1');
 
 -- --------------------------------------------------------
 
@@ -729,44 +643,6 @@ CREATE TABLE `invoices` (
   `created_at` int(11) DEFAULT NULL,
   `updated_at` int(11) DEFAULT NULL COMMENT 'This column is all about payment taking date'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `invoices`
---
-
-INSERT INTO `invoices` (`id`, `title`, `total_amount`, `class_id`, `student_id`, `payment_method`, `paid_amount`, `status`, `school_id`, `session`, `created_at`, `updated_at`) VALUES
-(1, 'test', 500, 1, 1, NULL, 100, 'unpaid', 1, '1', 1617400800, 1617400800),
-(2, 'مصاريف', 5000, 2, 2, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(3, 'مصاريف', 5000, 2, 3, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(4, 'مصاريف', 5000, 2, 4, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(5, 'مصاريف', 5000, 2, 5, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(6, 'مصاريف', 5000, 2, 6, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(7, 'مصاريف', 5000, 2, 7, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(8, 'مصاريف', 5000, 2, 8, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(9, 'مصاريف', 5000, 2, 9, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(10, 'مصاريف', 5000, 2, 10, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(11, 'مصاريف', 5000, 2, 11, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(12, 'مصاريف', 5000, 2, 12, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(13, 'مصاريف', 5000, 2, 13, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(14, 'مصاريف', 5000, 2, 14, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(15, 'مصاريف', 5000, 2, 15, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(16, 'مصاريف', 5000, 2, 16, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(17, 'مصاريف', 5000, 2, 17, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(18, 'مصاريف', 5000, 2, 18, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(19, 'مصاريف', 5000, 2, 19, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(20, 'مصاريف', 5000, 2, 20, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(21, 'مصاريف', 5000, 2, 21, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(22, 'مصاريف', 5000, 2, 22, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(23, 'مصاريف', 5000, 2, 23, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(24, 'مصاريف', 5000, 2, 24, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(25, 'مصاريف', 5000, 2, 25, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(26, 'مصاريف', 5000, 2, 26, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(27, 'مصاريف', 5000, 2, 27, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(28, 'مصاريف', 5000, 2, 28, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(29, 'مصاريف', 5000, 2, 29, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(30, 'مصاريف', 5000, 2, 30, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(31, 'مصاريف', 5000, 2, 31, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200),
-(32, 'مصاريف', 5000, 2, 32, NULL, 5000, 'paid', 2, '1', 1617919200, 1617919200);
 
 -- --------------------------------------------------------
 
@@ -905,14 +781,6 @@ CREATE TABLE `parents` (
   `school_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `parents`
---
-
-INSERT INTO `parents` (`id`, `user_id`, `school_id`) VALUES
-(1, 3, 1),
-(2, 6, 2);
-
 -- --------------------------------------------------------
 
 --
@@ -968,14 +836,6 @@ CREATE TABLE `schools` (
   `phone` longtext COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `schools`
---
-
-INSERT INTO `schools` (`id`, `name`, `address`, `phone`) VALUES
-(1, 'test', 'School Address', '+123123123123'),
-(2, 'test', 'School Address', '+123123123123');
-
 -- --------------------------------------------------------
 
 --
@@ -988,14 +848,6 @@ CREATE TABLE `sections` (
   `class_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `sections`
---
-
-INSERT INTO `sections` (`id`, `name`, `class_id`) VALUES
-(1, 'A', 1),
-(2, 'A', 2);
-
 -- --------------------------------------------------------
 
 --
@@ -1007,14 +859,6 @@ CREATE TABLE `sessions` (
   `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `sessions`
---
-
-INSERT INTO `sessions` (`id`, `name`, `status`) VALUES
-(1, '2021', 1),
-(2, '2021', 1);
 
 -- --------------------------------------------------------
 
@@ -1088,44 +932,6 @@ CREATE TABLE `students` (
   `school_id` int(11) DEFAULT NULL,
   `joining` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `students`
---
-
-INSERT INTO `students` (`id`, `code`, `user_id`, `parent_id`, `session`, `school_id`, `joining`) VALUES
-(1, '2021-2789-5401', 4, 1, 1, 1, NULL),
-(2, '2021-2013-9765', 8, 2, 1, 2, NULL),
-(3, '2021-5819-7632', 9, 2, 1, 2, NULL),
-(4, '2021-0387-1926', 10, 2, 1, 2, NULL),
-(5, '2021-7810-3569', 0, NULL, 1, 2, NULL),
-(6, '2021-5307-1426', 0, NULL, 1, 2, NULL),
-(7, '2021-2745-8603', 0, NULL, 1, 2, NULL),
-(8, '2021-1390-6287', 0, NULL, 1, 2, NULL),
-(9, '2021-4925-7018', 0, NULL, 1, 2, NULL),
-(10, '2021-7930-6421', 0, NULL, 1, 2, NULL),
-(11, '2021-8406-9573', 11, NULL, 1, 2, NULL),
-(12, '2021-9381-2745', 12, NULL, 1, 2, NULL),
-(13, '2021-2741-9805', 13, NULL, 1, 2, NULL),
-(14, '2021-8169-2735', 14, NULL, 1, 2, NULL),
-(15, '2021-4631-5892', 15, NULL, 1, 2, NULL),
-(16, '2021-1436-9207', 16, NULL, 1, 2, NULL),
-(17, '2021-1749-8530', 17, NULL, 1, 2, NULL),
-(18, '2021-9376-8042', 18, NULL, 1, 2, NULL),
-(19, '2021-2397-5681', 19, NULL, 1, 2, NULL),
-(20, '2021-2573-1689', 20, NULL, 1, 2, NULL),
-(21, '2021-8469-5370', 21, 2, 1, 2, NULL),
-(22, '2021-5417-8639', 22, 2, 1, 2, NULL),
-(23, '2021-2309-4671', 23, 0, 1, 2, '9/11/2021'),
-(24, '2021-6379-2041', 24, 0, 1, 2, '9/11/2021'),
-(25, '2021-7486-5310', 25, 0, 1, 2, '9/12/2021'),
-(26, '2021-7594-6120', 26, 0, 1, 2, '9/13/2021'),
-(27, '2021-2839-6410', 27, 0, 1, 2, '9/14/2021'),
-(28, '2021-9368-0721', 28, 0, 1, 2, '9/15/2021'),
-(29, '2021-1372-8065', 29, 0, 1, 2, '9/16/2021'),
-(30, '2021-5678-2491', 30, 0, 1, 2, '9/17/2021'),
-(31, '2021-3802-9471', 31, 0, 1, 2, '9/18/2021'),
-(32, '2021-3586-7124', 32, 0, 1, 2, '9/19/2021');
 
 -- --------------------------------------------------------
 
@@ -1221,36 +1027,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `address`, `phone`, `joining`, `remember_token`, `birthday`, `gender`, `blood_group`, `school_id`, `authentication_key`, `watch_history`) VALUES
-(1, 'Ahmed', 'ahmed@gmail.com', 'a5c84771bf011ed14ef6b77a50df91cf47da5535', 'superadmin', NULL, NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(3, 'test', 'test@test.com', '6e45a996ca8c1c3bb0a7807c039dfffb02c0cad2', 'parent', 'tset', 'tset', '', NULL, NULL, 'Male', 'a-', 1, NULL, '[]'),
-(4, 'test', 'test@test1.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'student', 'test', 'tset', '', NULL, '1617400800', 'Male', 'b-', 1, NULL, '[]'),
-(5, 'Ahmed', 'ahmed@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'superadmin', NULL, NULL, '', NULL, NULL, NULL, NULL, 2, NULL, '[]'),
-(6, 'bassem', 'bassem@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'parent', '143', '123', '', NULL, NULL, 'Male', 'a+', 2, NULL, '[]'),
-(7, 'ahmed', 'eng.ahmedmohamed.2002@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'admin', 'test', '+201275457924', '', NULL, NULL, 'Male', 'a+', 2, NULL, '[]'),
-(8, 'Ahmed Mohamed Ibrahim', 'teset@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '+201275457924', '', NULL, '1617919200', 'Male', 'test', 2, NULL, '[]'),
-(9, 'ahmed mohamed', 'asd@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'student', 'Moharram Bey\r\n', '000', '', NULL, '1617919200', 'Male', 'asdasd', 2, NULL, '[]'),
-(10, 'fghn', 'support@codux.me', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'student', 'Alexandria', '000', '', NULL, '1617919200', 'Male', 'حساسية', 2, NULL, '[]'),
-(12, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '+201275457924', '', NULL, '1617919200', 'Male', 'tu', 2, NULL, '[]'),
-(13, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '+201275457924', '', NULL, '1617919200', 'Male', 'i', 2, NULL, '[]'),
-(14, 'Ahmed Ibrahim', NULL, NULL, 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '01275457924', '', NULL, '1617919200', 'Male', 'i', 2, NULL, '[]'),
-(15, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '+201275457924', '', NULL, '1617919200', 'Male', '', 2, NULL, '[]'),
-(16, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '+201275457924', '', NULL, '1617919200', 'Male', '', 2, NULL, '[]'),
-(17, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '+201275457924', '', NULL, '1617919200', 'Male', '', 2, NULL, '[]'),
-(18, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '+201275457924', '', NULL, '1617919200', 'Male', 'try', 2, NULL, '[]'),
-(19, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '+201275457924', '', NULL, '1617919200', 'Male', '', 2, NULL, '[]'),
-(20, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', '5 St. Junior School - Nadi Elsaid - Moharram Bey', '+201275457924', NULL, NULL, '1617919200', 'Male', 'uyh', 2, NULL, '[]'),
-(21, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', NULL, NULL, NULL, NULL, NULL, 'Male', NULL, 2, NULL, '[]'),
-(22, 'Ahmed Mohamed Ibrahim', NULL, NULL, 'student', NULL, NULL, NULL, NULL, NULL, 'Male', NULL, 2, NULL, '[]'),
-(23, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '0', '9/11/2021', NULL, '9/11/2002', 'Male', 'Nothing', 2, NULL, '[]'),
-(24, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '0', '9/11/2021', NULL, '9/11/2002', 'Male', 'Nothing', 2, NULL, '[]'),
-(25, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '1', '9/12/2021', NULL, '9/12/2002', 'Male', 'Nothing', 2, NULL, '[]'),
-(26, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '2', '9/13/2021', NULL, '9/13/2002', 'Male', 'Nothing', 2, NULL, '[]'),
-(27, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '3', '9/14/2021', NULL, '9/14/2002', 'Male', 'Nothing', 2, NULL, '[]'),
-(28, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '4', '9/15/2021', NULL, '9/15/2002', 'Male', 'Nothing', 2, NULL, '[]'),
-(29, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '5', '9/16/2021', NULL, '9/16/2002', 'Male', 'Nothing', 2, NULL, '[]'),
-(30, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '6', '9/17/2021', NULL, '9/17/2002', 'Male', 'Nothing', 2, NULL, '[]'),
-(31, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '7', '9/18/2021', NULL, '9/18/2002', 'Male', 'Nothing', 2, NULL, '[]'),
-(32, 'ahmedmohamed', NULL, NULL, 'student', 'Moharram Bey', '8', '9/19/2021', NULL, '9/19/2002', 'Male', 'Nothing', 2, NULL, '[]');
+(1, 'Ahmed', 'ahmed@gmail.com', 'a5c84771bf011ed14ef6b77a50df91cf47da5535', 'superadmin', NULL, NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]');
 
 --
 -- Indexes for dumped tables
@@ -1505,13 +1282,13 @@ ALTER TABLE `book_issues`
 -- AUTO_INCREMENT for table `classes`
 --
 ALTER TABLE `classes`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `class_rooms`
 --
 ALTER TABLE `class_rooms`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `common_settings`
@@ -1529,19 +1306,19 @@ ALTER TABLE `currencies`
 -- AUTO_INCREMENT for table `daily_attendances`
 --
 ALTER TABLE `daily_attendances`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `departments`
 --
 ALTER TABLE `departments`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `enrols`
 --
 ALTER TABLE `enrols`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `event_calendars`
@@ -1553,19 +1330,19 @@ ALTER TABLE `event_calendars`
 -- AUTO_INCREMENT for table `exams`
 --
 ALTER TABLE `exams`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `expenses`
 --
 ALTER TABLE `expenses`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `expense_categories`
 --
 ALTER TABLE `expense_categories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `frontend_events`
@@ -1601,7 +1378,7 @@ ALTER TABLE `grades`
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `marks`
@@ -1625,7 +1402,7 @@ ALTER TABLE `noticeboard`
 -- AUTO_INCREMENT for table `parents`
 --
 ALTER TABLE `parents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `payment_settings`
@@ -1643,19 +1420,19 @@ ALTER TABLE `routines`
 -- AUTO_INCREMENT for table `schools`
 --
 ALTER TABLE `schools`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sections`
 --
 ALTER TABLE `sections`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sessions`
 --
 ALTER TABLE `sessions`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -1673,7 +1450,7 @@ ALTER TABLE `smtp_settings`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `subjects`
@@ -1703,7 +1480,7 @@ ALTER TABLE `teacher_permissions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
