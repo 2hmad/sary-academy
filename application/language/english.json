@@ -1165,5 +1165,6 @@
     "recaptcha_settings_updated": "Recaptcha settings updated",
     "exam_updated_successfully": "Exam updated successfully",
     "no_data_available_in_table": "No data available in table",
-    "joining_date": "Joining Date"
+    "joining_date": "Joining Date",
+    "activities": "Activities"
 }
