@@ -1166,5 +1166,10 @@
     "exam_updated_successfully": "Exam updated successfully",
     "no_data_available_in_table": "No data available in table",
     "joining_date": "Joining Date",
-    "activities": "Activities"
+    "activities": "Activities",
+    "create_new_activity": "Create New Activity",
+    "add_activity": "Add Activity",
+    "create_activity": "Create Activity",
+    "activity_title": "Activity Title",
+    "provide_activity_title": "Provide Activity Title"
 }

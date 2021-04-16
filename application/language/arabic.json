@@ -407,10 +407,16 @@
     "payment_date": "تاريخ الدفع",
     "print_invoice": "طباعة الفاتورة",
     "update_invoice": "تعديل الفاتورة",
-    "export_pdf": "Export pdf",
-    "all": "All",
-    "student_fee_report": "Student fee report",
-    "from": "From",
-    "to": "To",
-    "creation_date": "Creation date"
+    "export_pdf": "اصدار pdf",
+    "all": "الجميع",
+    "student_fee_report": "تقرير مصاريف الطلاب",
+    "from": "من",
+    "to": "إلي",
+    "creation_date": "تاريخ الانشاء",
+    "activities": "الأنشطة",
+    "create_new_activity": "انشاء نشاط جديد",
+    "add_activity": "اضافة نشاط",
+    "create_activity": "اضافة نشاط",
+    "activity_title": "اسم النشاط",
+    "provide_activity_title": "ادخل اسم النشاط"
 }

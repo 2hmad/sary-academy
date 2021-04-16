@@ -104,6 +104,9 @@ if($user_type == 'parent'){
       <?php }
     }
     ?>
+    <li class="side-nav-item">
+    <a href="<?php echo site_url($controller.'/activities') ?>" class="side-nav-link"><i class="dripicons-to-do"></i><span><?php echo get_phrase('activities'); ?></span></a>
+    </li>
   </ul>
   <!-- End Sidebar -->
 

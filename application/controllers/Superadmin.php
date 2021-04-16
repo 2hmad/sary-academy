@@ -1023,6 +1023,51 @@ class Superadmin extends CI_Controller {
   }
   //END SESSION_MANAGER section
 
+  
+  //START SESSION_MANAGER section
+  public function activities_manager($param1 = '', $param2 = ''){
+    $school_id = school_id();
+
+    if($param1 == 'create'){
+      $response = $this->crud_model->activity_create();
+      echo $response;
+    }
+
+    if($param1 == 'update'){
+      $response = $this->crud_model->activity_update($param2);
+      echo $response;
+    }
+
+    if($param1 == 'delete'){
+      $response = $this->crud_model->activity_delete($param2);
+      echo $response;
+    }
+
+    if($param1 == 'active_activity'){
+      $response = $this->crud_model->active_activity($param2);
+      echo $response;
+    }
+
+    if($param1 == 'reopen_activity'){
+      echo $this->db->get_where('activities', array('school_id' => $school_id, 'status' => 1))->row('name');
+    }
+
+    if($param1 == 'reopen_list'){
+      $this->load->view('backend/superadmin/activities/table_body');
+    }
+
+    if ($param1 == 'list') {
+      $this->load->view('backend/superadmin/activities/list');
+    }
+
+    if(empty($param1)){
+      $page_data['folder_name'] = 'activities';
+      $page_data['page_title'] = 'session_manager';
+      $this->load->view('backend/index', $page_data);
+    }
+  }
+  //END SESSION_MANAGER section
+
   //BOOK LIST MANAGER
   public function book($param1 = "", $param2 = "") {
     // adding book
